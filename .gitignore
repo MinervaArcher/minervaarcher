@@ -1,0 +1,10 @@
+# SASS Artifacts
+.sass-cache
+*.css.map
+
+# Mac Folder Artifacts
+.DS_Store
+
+config.rb
+
+dan

@@ -1,0 +1,1 @@
+A site this small doesn't usually require three different modules for model, view, and controller, but I wanted to show how I organize more complex projects where most or all of the view is rendered client-side.

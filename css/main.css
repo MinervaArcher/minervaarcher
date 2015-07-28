@@ -1,0 +1,274 @@
+/**==========================================
+Basic Reset Styles adapted from Eric Meyer's
+HTML5 CSS Reset Stylesheet
+============================================**/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+html, body {
+  background-color: #1E202C;
+  color: #E1E5D4;
+  font-family: "Open Sans", serif;
+  line-height: 1;
+  height: 100%; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+ul, ol {
+  list-style-type: none; }
+
+a {
+  color: #14C2C0;
+  transition: color, 0.25s; }
+  a:hover, a:active, header a.active {
+    color: #4fedeb; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+button {
+  border: none; }
+
+.show-for-mobile {
+  display: none; }
+
+body {
+  padding-top: 80px;
+  line-height: 1.5em; }
+
+header {
+  background-color: #014B56;
+  color: #14C2C0;
+  font-family: "Montserrat", "Gotham", sans-serif;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  line-height: 80px;
+  width: 100%;
+  padding: 0 20px; }
+  header .burger, header ul {
+    float: right; }
+  header ul {
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  header li {
+    display: inline-block;
+    margin-left: 15px; }
+  header a {
+    text-decoration: none; }
+
+.logo {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+nav, section {
+  width: 95%;
+  max-width: 975px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.burger {
+  height: 40px;
+  width: 40px;
+  background-color: #14C2C0; }
+
+section {
+  display: none;
+  width: 95%;
+  height: auto;
+  min-height: 100%;
+  max-width: 975px;
+  background-size: cover; }
+  section p {
+    margin-bottom: 16px; }
+  section.about {
+    background-image: url("../img/lake1.jpg"); }
+  section.portfolio {
+    background-image: url("../img/beach1.jpg"); }
+  section.contact {
+    background-image: url("../img/beach2.jpg"); }
+
+.section-body {
+  padding: 40px 60px 80px; }
+
+h2, h3, h4 {
+  font-family: "Montserrat", "Gotham", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center; }
+
+h3 {
+  font-size: 20px;
+  margin: 30px 0 20px; }
+
+h4 {
+  font-size: 18px; }
+
+dl {
+  width: 100%;
+  display: block; }
+  dl dt, dl dd {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px; }
+  dl dt {
+    width: 25%;
+    line-height: 18px;
+    text-align: right;
+    padding-right: 15px; }
+  dl dd {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    width: 70%;
+    height: 12px;
+    line-height: 12px;
+    background-color: #E1E5D4;
+    overflow: hidden; }
+  dl span {
+    display: inline-block;
+    height: 100%;
+    background-color: #14C2C0; }
+    dl span.beginner {
+      width: 10%; }
+    dl span.junior {
+      width: 40%; }
+    dl span.intermediate {
+      width: 60%; }
+    dl span.advanced {
+      width: 80%; }
+    dl span.expert {
+      width: 90%; }
+
+.sample {
+  margin: 30px 0 20px 0; }
+  .sample .col-left, .sample .col-right {
+    display: inline-block;
+    vertical-align: top; }
+  .sample .col-left {
+    width: 30%; }
+  .sample .col-right {
+    width: 70%;
+    padding: 0 20px; }
+  .sample .preview-img {
+    height: 200px;
+    width: 200px;
+    background-color: #E1E5D4; }
+  .sample .label {
+    background-color: #2D6E68;
+    color: #14C2C0;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    line-height: 30px; }
+  .sample .layout-preview {
+    cursor: pointer; }
+  .sample .preview-container {
+    margin-top: 20px; }
+
+form label, form input, form textarea {
+  display: block;
+  width: 80%; }
+form label {
+  margin: 20px 0 5px; }
+form button {
+  margin-top: 30px;
+  background-color: #14C2C0;
+  color: #1E202C;
+  padding: 5px 10px; }
+  form button:hover {
+    background-color: #21e8e6; }
+
+footer {
+  background-color: #014B56;
+  color: #14C2C0;
+  text-align: center;
+  padding: 20px 0; }
+
+@media screen and (max-width: 550px) {
+  .show-for-mobile {
+    display: block; }
+
+  .hide-for-mobile {
+    display: none; }
+
+  header ul {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #1E202C;
+    text-align: center; }
+  header li {
+    display: block;
+    position: relative; }
+    header li a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+      header li a:hover {
+        background-color: #282b3b; }
+
+  .burger {
+    margin: 15px 0; }
+
+  .sample .preview-img {
+    height: 100px;
+    width: 100px; } }
+@media screen and (min-width: 551px) and (max-width: 850px) {
+  .sample .preview-img {
+    height: 150px;
+    width: 150px; } }
+@media screen and (max-width: 850px) {
+  .logo {
+    font-size: 20px; }
+
+  header li {
+    font-size: 14px;
+    margin-left: 12px; }
+
+  .sample {
+    clear: both; }
+    .sample .col-left, .sample .col-right {
+      display: block; }
+    .sample .col-left {
+      float: left;
+      margin: 0 30px 20px 0; }
+    .sample .col-right {
+      padding: 0;
+      width: auto; }
+    .sample .layout-preview {
+      width: 100%; }
+
+  form label, form input, form textarea {
+    width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */

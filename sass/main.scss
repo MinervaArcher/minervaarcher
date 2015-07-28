@@ -1,0 +1,265 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+@import 'reset';
+
+$headerHeight: 80px;
+
+.show-for-mobile {
+	display: none;
+}
+body {
+	padding-top: $headerHeight;
+	line-height: 1.5em;
+}
+header {
+	background-color: $headerBackground;
+	color: $headerText;
+	font-family: $montserrat;
+	position: fixed;
+	top: 0;
+	height: $headerHeight;
+	line-height: $headerHeight;
+	width: 100%;
+	padding: 0 20px;
+	.burger, ul {
+		float: right;
+	}
+	ul {
+		text-align: right;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+	a { 
+		text-decoration: none;
+		&.active {
+			@extend a:active;
+		}
+	}
+}
+.logo {
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+nav, section {
+	width: 95%;
+	max-width: 975px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.burger {
+	height: 40px;
+	width: 40px;
+	background-color: $turquoise;
+}
+section {
+	display: none;
+	width: 95%;
+	height: auto;
+	min-height: 100%;
+	max-width: 975px;
+	background-size: cover;
+
+	p { margin-bottom: 16px; }
+	&.about {
+		background-image: url('../img/lake1.jpg');
+	}
+	&.portfolio {
+		background-image: url('../img/beach1.jpg');
+	}
+	&.contact {
+		background-image: url('../img/beach2.jpg');
+	}
+}
+.section-body {
+	padding: 40px 60px 80px;
+}
+h2, h3, h4 { 
+	font-family: $montserrat;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+h2 {
+	font-size: 26px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+h3 {
+	font-size: 20px;
+	margin: 30px 0 20px;
+}
+h4 {
+	font-size: 18px;
+}
+dl {
+	width: 100%;
+	display: block;
+	dt, dd {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 20px;
+	}
+	dt { 
+		width: 25%;
+		line-height: 18px;
+		text-align: right;
+		padding-right: 15px;
+	}
+	dd {
+		@include border-radius(8px);
+		width: 70%;
+		height: 12px;
+		line-height: 12px;
+		background-color: $tan;
+		overflow: hidden;
+	}
+	span {
+		display: inline-block;
+		height: 100%;
+		background-color: $turquoise;
+		&.beginner { width: 10%; }
+		&.junior { width: 40%; }
+		&.intermediate { width: 60%; }
+		&.advanced { width: 80%; }
+		&.expert { width: 90%; }
+	}
+}
+.sample {
+	margin: 30px 0 20px 0;
+	.col-left, .col-right {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.col-left {
+		width: 30%;
+	}
+	.col-right {
+		width: 70%;
+		padding: 0 20px;
+	}
+	.preview-img {
+		height: 200px;
+		width: 200px;
+		background-color: $tan;
+	}
+	.label {
+		background-color: $leaf;
+		color: $turquoise;
+		text-align: center;
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.layout-preview {
+		cursor: pointer;
+	}
+	.preview-container{
+		margin-top: 20px;
+	}
+}
+form {
+	label, input, textarea {
+		display: block;
+		width: 80%;
+	}
+	label {
+		margin: 20px 0 5px;
+	}
+	button {
+		margin-top: 30px;
+		background-color: $buttonColor;
+		color: $buttonTextColor;
+		padding: 5px 10px;
+		&:hover {
+			background-color: lighten($buttonColor, 10%);
+		}
+	}
+}
+footer {
+	background-color: $footerBackground;
+	color: $footerText;
+	text-align: center;
+	padding: 20px 0;
+}
+
+@media screen and (max-width: 550px) {
+	.show-for-mobile {
+		display: block;
+	}
+	.hide-for-mobile {
+		display: none;
+	}
+	header {
+		ul {
+			position: absolute;
+			top: $headerHeight;
+			left: 0;
+			width: 100%;
+			background-color: $navy;
+			text-align: center;
+		}
+		li { 
+			display: block;
+			position: relative;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				&:hover {
+					background-color: lighten($navy, 5%);
+				}
+			}
+		}
+	}
+	.burger {
+		margin: 15px 0;
+	}
+	.sample {
+		.preview-img {
+			height: 100px;
+			width: 100px;
+		}
+	}
+}
+
+@media screen and (min-width: 551px) and (max-width: 850px) {
+	.sample {
+		.preview-img {
+			height: 150px;
+			width: 150px;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.logo { font-size: 20px; }
+	header li { 
+		font-size: 14px;
+		margin-left: 12px;
+	}
+	.sample {
+		clear: both;
+		.col-left, .col-right { display: block; }
+		.col-left { 
+			float: left; 
+			margin: 0 30px 20px 0;
+		}
+		.col-right { 
+			padding: 0;
+			width: auto;
+		}
+		.layout-preview {
+			width: 100%;
+		}
+	}
+	form {
+		label, input, textarea {
+			width: 100%;
+		}
+	}
+}
