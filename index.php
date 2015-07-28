@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="author" content="Minerva Archer">
 	<meta name="keywords" content="minerva archer, publishing, digital, development, front-end development, editorial, editing, NYC">
-	<meta name="description" content="Minerva Archer is a multitalented creative professional working in the greater NYC area. Services include front-end web development, editing, and project and product management.">
+	<meta name="description" content="Minerva Archer is a creative technologist working in the greater NYC area. Skills include front-end web development, editing, and project and product management.">
 	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<link rel="icon" type="image/png" href="/img/favicon.png">
@@ -118,7 +118,7 @@
 					</div>
 				</div><div class="col-right">
 					<h4>Technical Writing</h4>
-					<p>I seem to become the process documenter/wiki maintainer everywhere I go, and that was especially true during my time as project manager. Here are two project setup guides I wrote for a new-to-tech team working on a project that ran on Apache Tomcat.</p>
+					<p>I've become the process documenter/wiki maintainer everywhere I go; this was especially true during my time as project manager. Here are two project setup guides I wrote for a new-to-tech team working on a project that ran on Apache Tomcat.</p>
 					<a href="downloads/tech_writing.zip" download="tech_writing.zip">Download</a>
 				</div>
 			</div>
@@ -127,19 +127,16 @@
 	<section id="contact-section" class="contact">
 		<div class="section-body">
 			<h2>Contact</h2>
-			<p>I'm not currently available for freelance work, but fill out the form below and I'll respond with my upcoming availability within five buisness days. Include as much information as you can about what you need, your timeframe for getting the work done, the project's scope, and your approved budget for my role.</p>
+			<p>I'm not currently available for freelance work, but fill out the form below and I'll respond with my upcoming availability within five business days. Include as much information as you can about what you need, your timeframe for getting the work done, the project's scope, and your approved budget for my role.</p>
 			<div id="form_container">
 				<form action="processForm.php" method="post">
-					
 					<label for="name">Your Name (required)</label>
 					<input name="name" type="text" required="required">
 					<label for="email">Your Email (required)</label>
 					<input name="email" type="email" required="required">
 					<label for="message">What can I do for you?</label>
 					<textarea name="message" rows="15"></textarea>
-					
 					<button id="submit" name="submit" type="submit" value="Submit">Submit</button>
-					
 				</form>
 			</div>
 		</div>
