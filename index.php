@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html>
 
 <head profile="http://www.w3.org/2005/10/profile">
 	<title>Minerva Archer</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="author" content="Minerva Archer">
 	<meta name="keywords" content="minerva archer, publishing, digital, development, front-end development, editorial, editing, NYC">
 	<meta name="description" content="Minerva Archer is a creative technologist working in the greater NYC area. Skills include front-end web development, editing, and project and product management.">
@@ -127,7 +127,7 @@
 	<section id="contact-section" class="contact">
 		<div class="section-body">
 			<h2>Contact</h2>
-			<p>I'm not currently available for freelance work, but fill out the form below and I'll respond with my upcoming availability within five business days. Include as much information as you can about what you need, your timeframe for getting the work done, the project's scope, and your approved budget for my role.</p>
+			<p>Fill out the form below and I'll respond with my upcoming availability within five business days. Include as much information as you can about what you need, your timeframe for getting the work done, the project's scope, and your approved budget for my role.</p>
 			<div id="form_container">
 				<form action="processForm.php" method="post">
 					<label for="name">Your Name (required)</label>

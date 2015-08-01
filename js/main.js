@@ -64,7 +64,7 @@ MA.View = (function () {
 	}
 
 	function _renderView() {
-		var curView = model.get('curView');
+		var curView = window.location.hash || model.get('curView');
 		_$.body.scrollTop(0, 0);
 		_$.sections.hide();
 		_$.navLinks.removeClass('active');

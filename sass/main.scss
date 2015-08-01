@@ -4,10 +4,9 @@
 @import 'reset';
 
 $headerHeight: 80px;
+$headerHeightSmall: 60px;
 
-.show-for-mobile {
-	display: none;
-}
+.show-for-mobile { display: none; }
 body {
 	padding-top: $headerHeight;
 	line-height: 1.5em;
@@ -22,9 +21,7 @@ header {
 	line-height: $headerHeight;
 	width: 100%;
 	padding: 0 20px;
-	.burger, ul {
-		float: right;
-	}
+	.burger, ul { float: right; }
 	ul {
 		text-align: right;
 		text-transform: uppercase;
@@ -36,9 +33,7 @@ header {
 	}
 	a { 
 		text-decoration: none;
-		&.active {
-			@extend a:active;
-		}
+		&.active { @extend a:active; }
 	}
 }
 .logo {
@@ -56,6 +51,21 @@ nav, section {
 	height: 40px;
 	width: 40px;
 	background-color: $turquoise;
+	position: relative;
+	cursor: pointer;
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 8px;
+		background-color: $headerBackground;
+	}
+	&:before {
+		top: 8px;
+	}
+	&:after {
+		bottom: 8px;
+	}
 }
 section {
 	display: none;
@@ -66,19 +76,11 @@ section {
 	background-size: cover;
 
 	p { margin-bottom: 16px; }
-	&.about {
-		background-image: url('../img/lake1.jpg');
-	}
-	&.portfolio {
-		background-image: url('../img/beach1.jpg');
-	}
-	&.contact {
-		background-image: url('../img/beach2.jpg');
-	}
+	&.about { background-image: url('../img/lake1.jpg'); }
+	&.portfolio { background-image: url('../img/beach1.jpg'); }
+	&.contact { background-image: url('../img/beach2.jpg'); }
 }
-.section-body {
-	padding: 40px 60px 80px;
-}
+.section-body { padding: 40px 60px 80px; }
 h2, h3, h4 { 
 	font-family: $montserrat;
 	text-transform: uppercase;
@@ -93,9 +95,7 @@ h3 {
 	font-size: 20px;
 	margin: 30px 0 20px;
 }
-h4 {
-	font-size: 18px;
-}
+h4 { font-size: 18px; }
 dl {
 	width: 100%;
 	display: block;
@@ -135,9 +135,7 @@ dl {
 		display: inline-block;
 		vertical-align: top;
 	}
-	.col-left {
-		width: 30%;
-	}
+	.col-left { width: 30%; }
 	.col-right {
 		width: 70%;
 		padding: 0 20px;
@@ -155,29 +153,21 @@ dl {
 		height: 30px;
 		line-height: 30px;
 	}
-	.layout-preview {
-		cursor: pointer;
-	}
-	.preview-container{
-		margin-top: 20px;
-	}
+	.layout-preview { cursor: pointer; }
+	.preview-container { margin-top: 20px; }
 }
 form {
 	label, input, textarea {
 		display: block;
 		width: 80%;
 	}
-	label {
-		margin: 20px 0 5px;
-	}
+	label { margin: 20px 0 5px; }
 	button {
 		margin-top: 30px;
 		background-color: $buttonColor;
 		color: $buttonTextColor;
 		padding: 5px 10px;
-		&:hover {
-			background-color: lighten($buttonColor, 10%);
-		}
+		&:hover { background-color: lighten($buttonColor, 10%); }
 	}
 }
 footer {
@@ -187,13 +177,27 @@ footer {
 	padding: 20px 0;
 }
 
+@media screen and (max-width: 400px) {
+	body { padding-top: $headerHeightSmall; }
+	header {
+		height: $headerHeightSmall;
+		line-height: $headerHeightSmall;
+		ul { top: $headerHeightSmall; }
+	}
+	.logo { font-size: 20px; }
+	.burger { margin: 10px 0; }
+	.section-body { padding: 30px 15px; }
+}
+
+@media screen and (min-width: 401px) and (max-width: 550px) {
+	header ul { top: $headerHeight; }
+	.burger { margin: 20px 0; }
+	.section-body { padding: 30px; }
+}
+
 @media screen and (max-width: 550px) {
-	.show-for-mobile {
-		display: block;
-	}
-	.hide-for-mobile {
-		display: none;
-	}
+	.show-for-mobile { display: block; }
+	.hide-for-mobile { display: none; }
 	header {
 		ul {
 			position: absolute;
@@ -210,25 +214,26 @@ footer {
 				display: block;
 				width: 100%;
 				height: 100%;
-				&:hover {
-					background-color: lighten($navy, 5%);
-				}
+				&:hover { background-color: lighten($navy, 5%); }
 			}
 		}
 	}
-	.burger {
-		margin: 15px 0;
-	}
 	.sample {
+		.col-left { margin: 0 25px 10px 0; }
 		.preview-img {
 			height: 100px;
 			width: 100px;
 		}
 	}
+	dl {
+		dt { width: 35%; }
+		dd { width: 60%; }
+	}
 }
 
 @media screen and (min-width: 551px) and (max-width: 850px) {
 	.sample {
+		.col-left { margin: 0 30px 15px 0; }
 		.preview-img {
 			height: 150px;
 			width: 150px;
@@ -237,7 +242,6 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
-	.logo { font-size: 20px; }
 	header li { 
 		font-size: 14px;
 		margin-left: 12px;
@@ -245,21 +249,17 @@ footer {
 	.sample {
 		clear: both;
 		.col-left, .col-right { display: block; }
-		.col-left { 
-			float: left; 
-			margin: 0 30px 20px 0;
+		.col-left {  
+			float: left;
+			width: auto;
 		}
 		.col-right { 
 			padding: 0;
 			width: auto;
 		}
-		.layout-preview {
-			width: 100%;
-		}
+		.layout-preview { width: 100%; }
 	}
 	form {
-		label, input, textarea {
-			width: 100%;
-		}
+		label, input, textarea { width: 100%; }
 	}
 }
