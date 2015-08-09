@@ -180,24 +180,32 @@ footer {
 @media screen and (max-width: 400px) {
 	body { padding-top: $headerHeightSmall; }
 	header {
+		padding: 0 15px;
 		height: $headerHeightSmall;
 		line-height: $headerHeightSmall;
 		ul { top: $headerHeightSmall; }
 	}
 	.logo { font-size: 20px; }
-	.burger { margin: 10px 0; }
+	.burger {
+		margin: 15px 0;
+		height: 30px;
+		width: 30px;
+		&:before, &:after { height: 6px; }
+		&:before { top: 6px; }
+		&:after { bottom: 6px; }
+	}
 	.section-body { padding: 30px 15px; }
 }
 
 @media screen and (min-width: 401px) and (max-width: 550px) {
-	header ul { top: $headerHeight; }
-	.burger { margin: 20px 0; }
+	header {
+		padding: 0 30px;
+		ul { top: $headerHeight; }
+	}
 	.section-body { padding: 30px; }
 }
 
 @media screen and (max-width: 550px) {
-	.show-for-mobile { display: block; }
-	.hide-for-mobile { display: none; }
 	header {
 		ul {
 			position: absolute;
@@ -231,7 +239,13 @@ footer {
 	}
 }
 
+@media screen and (min-width: 401px) and (max-width: 850px) {
+	.burger { margin: 20px 0; }
+}
+
 @media screen and (min-width: 551px) and (max-width: 850px) {
+	header { padding: 0 40px; }
+	.section-body { padding: 40px 40px 60px; }
 	.sample {
 		.col-left { margin: 0 30px 15px 0; }
 		.preview-img {
@@ -242,10 +256,13 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
+	.show-for-mobile { display: block; }
+	.hide-for-mobile { display: none; }
 	header li { 
 		font-size: 14px;
-		margin-left: 12px;
+		margin-left: 5px;
 	}
+	nav, section { width: 100%; }
 	.sample {
 		clear: both;
 		.col-left, .col-right { display: block; }

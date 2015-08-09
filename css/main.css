@@ -230,6 +230,7 @@ footer {
     padding-top: 60px; }
 
   header {
+    padding: 0 15px;
     height: 60px;
     line-height: 60px; }
     header ul {
@@ -239,26 +240,27 @@ footer {
     font-size: 20px; }
 
   .burger {
-    margin: 10px 0; }
+    margin: 15px 0;
+    height: 30px;
+    width: 30px; }
+    .burger:before, .burger:after {
+      height: 6px; }
+    .burger:before {
+      top: 6px; }
+    .burger:after {
+      bottom: 6px; }
 
   .section-body {
     padding: 30px 15px; } }
 @media screen and (min-width: 401px) and (max-width: 550px) {
-  header ul {
-    top: 80px; }
-
-  .burger {
-    margin: 20px 0; }
+  header {
+    padding: 0 30px; }
+    header ul {
+      top: 80px; }
 
   .section-body {
     padding: 30px; } }
 @media screen and (max-width: 550px) {
-  .show-for-mobile {
-    display: block; }
-
-  .hide-for-mobile {
-    display: none; }
-
   header ul {
     position: absolute;
     top: 80px;
@@ -286,16 +288,34 @@ footer {
     width: 35%; }
   dl dd {
     width: 60%; } }
+@media screen and (min-width: 401px) and (max-width: 850px) {
+  .burger {
+    margin: 20px 0; } }
 @media screen and (min-width: 551px) and (max-width: 850px) {
+  header {
+    padding: 0 40px; }
+
+  .section-body {
+    padding: 40px 40px 60px; }
+
   .sample .col-left {
     margin: 0 30px 15px 0; }
   .sample .preview-img {
     height: 150px;
     width: 150px; } }
 @media screen and (max-width: 850px) {
+  .show-for-mobile {
+    display: block; }
+
+  .hide-for-mobile {
+    display: none; }
+
   header li {
     font-size: 14px;
-    margin-left: 12px; }
+    margin-left: 5px; }
+
+  nav, section {
+    width: 100%; }
 
   .sample {
     clear: both; }
